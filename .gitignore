@@ -1,0 +1,15 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/config/certs/
+/coverage/
+/doc/
+/logs/
+/pkg/
+/reports/
+/tmp/
+/**/.DS_Store
+/**/.env*
+/**/.idea/
+/**/*.gem
+/**/*.swp
