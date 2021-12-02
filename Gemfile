@@ -6,6 +6,7 @@ gem 'dry-validation', source: 'https://rubygems.org'
 gem 'puma', '~> 5.5.2', source: 'https://rubygems.org'
 gem 'rb-net_http-client', '~> 1.6.0', source: 'https://rubygems.org/'
 gem 'roda', '~> 3.50', source: 'https://rubygems.org'
+gem 'tilt', source: 'https://rubygems.org'
 
 group :test, :development do
   gem 'rake', source: 'https://rubygems.org'
