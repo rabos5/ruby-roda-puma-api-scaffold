@@ -3,7 +3,7 @@
 require 'json'
 require 'logger'
 require 'roda'
-require_relative 'sample_schema'
+# require_relative 'sample_schema'
 require_relative '../core/core'
 
 module Routes

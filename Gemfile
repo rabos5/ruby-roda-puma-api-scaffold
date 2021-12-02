@@ -3,9 +3,9 @@
 gem 'connection_pool', source: 'https://rubygems.org'
 gem 'dotenv', source: 'https://rubygems.org'
 gem 'dry-validation', source: 'https://rubygems.org'
-gem 'puma', '~> 4.3.1', source: 'https://rubygems.org'
-gem 'rb-net_http-client', '~> 1.5.0', source: 'https://rubygems.org/'
-gem 'roda', '~> 3.28', source: 'https://rubygems.org'
+gem 'puma', '~> 5.5.2', source: 'https://rubygems.org'
+gem 'rb-net_http-client', '~> 1.6.0', source: 'https://rubygems.org/'
+gem 'roda', '~> 3.50', source: 'https://rubygems.org'
 
 group :test, :development do
   gem 'rake', source: 'https://rubygems.org'

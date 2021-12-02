@@ -3,12 +3,12 @@ FROM ubuntu:latest
 ENV TERM xterm-256color
 
 # set rvm / ruby specific environment variables:
-ENV GEM_HOME /usr/local/rvm/gems/ruby-2.6.3
-ENV GEM_PATH /usr/local/rvm/gems/ruby-2.6.3:/usr/local/rvm/gems/ruby-2.6.3@global
+ENV GEM_HOME /usr/local/rvm/gems/ruby-3.0.2
+ENV GEM_PATH /usr/local/rvm/gems/ruby-3.0.2:/usr/local/rvm/gems/ruby-3.0.2@global
 ENV PATH $PATH:/usr/local/rvm/bin
-ENV PATH $PATH:/usr/local/rvm/rubies/ruby-2.6.3/bin
-ENV PATH /usr/local/rvm/gems/ruby-2.6.3/bin:$PATH
-ENV PATH $PATH:/usr/local/rvm/gems/ruby-2.6.3@global/bin
+ENV PATH $PATH:/usr/local/rvm/rubies/ruby-3.0.2/bin
+ENV PATH /usr/local/rvm/gems/ruby-3.0.2/bin:$PATH
+ENV PATH $PATH:/usr/local/rvm/gems/ruby-3.0.2@global/bin
 
 # install / setup ruby:
 RUN apt-get -qq update -y \
@@ -16,11 +16,11 @@ RUN apt-get -qq update -y \
     && apt-get -qq -y install curl \
     && curl -sSL https://rvm.io/mpapis.asc | gpg2 --import - \
     && curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import - \
-    && curl -sSL https://get.rvm.io | bash -s stable --ruby=2.6.3
+    && curl -sSL https://get.rvm.io | bash -s stable --ruby=3.0.2
 
 RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm"
 RUN /bin/bash -l -c "source /etc/profile.d/rvm.sh"
-RUN /bin/bash -l -c "rvm use 2.6.3 --default"
+RUN /bin/bash -l -c "rvm use 3.0.2 --default"
 RUN echo "[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*" >> /root/.bashrc
 
 # install bundler gem:
